@@ -1,0 +1,124 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#97EDDF"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#B8E786"
+        android:gravity="center" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/homebanner" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#97EDDF" >
+
+            <ImageView
+                android:id="@+id/dropboxaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/musicaction"
+                android:layout_toLeftOf="@+id/musicaction"
+                android:src="@drawable/dropbox" />
+
+            <ImageView
+                android:id="@+id/venmoaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/musicaction"
+                android:layout_toRightOf="@+id/musicaction"
+                android:src="@drawable/venmo" />
+
+            <ImageView
+                android:id="@+id/caraction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/musicaction"
+                android:layout_toRightOf="@+id/musicaction"
+                android:src="@drawable/car" />
+
+            <ImageView
+                android:id="@+id/brightnessaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/musicaction"
+                android:layout_toLeftOf="@+id/venmoaction"
+                android:src="@drawable/brightness" />
+
+            <ImageView
+                android:id="@+id/volumeaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/dropboxaction"
+                android:layout_below="@+id/dropboxaction"
+                android:src="@drawable/volume" />
+
+            <ImageView
+                android:id="@+id/musicaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="46dp"
+                android:src="@drawable/music_circle" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#E7BF78" >
+
+            <ImageView
+                android:id="@+id/playpause"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/playbutton" />
+
+            <TextView
+                android:id="@+id/songtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/playpause"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_toRightOf="@+id/playpause"
+                android:singleLine="true"
+                android:text="Welcome to New York"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/songartist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/songtitle"
+                android:layout_centerHorizontal="true"
+                android:singleLine="true"
+                android:text="Taylor Swift"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

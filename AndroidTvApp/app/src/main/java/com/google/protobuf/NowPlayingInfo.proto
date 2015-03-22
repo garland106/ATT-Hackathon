@@ -1,0 +1,13 @@
+package protofiles;
+
+option java_package = "com.google.protobuf";
+option java_outer_classname = "NowPlayingProto";
+
+message SongMessage 
+{
+	required string artist = 1;
+	required string title = 3;
+	optional bytes songIcon = 4;
+	optional string album = 5;
+	optional string dataURI = 6;
+}

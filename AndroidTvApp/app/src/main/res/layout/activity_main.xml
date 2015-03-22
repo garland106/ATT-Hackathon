@@ -1,0 +1,181 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sypir.sypertv.MainActivity"
+    android:id="@+id/backgound"
+    android:background="#97EDDF">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:background="#E7BF78"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="60dp"
+        android:id="@+id/musiclayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#E7BF78" >
+
+            <ImageView
+                android:id="@+id/playpause"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/play" />
+
+            <TextView
+                android:id="@+id/songtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/playpause"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_toRightOf="@+id/playpause"
+                android:singleLine="true"
+                android:text="Welcome to New York"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/songartist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/songtitle"
+                android:layout_centerHorizontal="true"
+                android:singleLine="true"
+                android:text="Taylor Swift"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/musiclist"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="280dp"
+        android:layout_height="450dp"
+        android:id="@+id/houserules"
+        android:src="@drawable/houserules"
+        android:layout_alignTop="@+id/musiclayout"
+        android:layout_toEndOf="@+id/musiclayout"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="50dp"/>
+
+    <AnalogClock
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:id="@+id/analogClock"
+        android:layout_alignTop="@+id/houserules"
+        android:layout_toEndOf="@+id/houserules"
+        android:layout_marginStart="20dp" />
+
+    <RelativeLayout
+        android:layout_width="225dp"
+        android:layout_height="200dp"
+        android:background="#b8e786"
+        android:id="@+id/houseinfo"
+        android:layout_alignBottom="@+id/houserules"
+        android:layout_alignStart="@+id/analogClock">
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Mar 21"
+            android:textSize="36sp"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:id="@+id/date" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Sunday"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_below="@+id/date"
+            android:layout_alignParentStart="true"
+            android:id="@+id/textView" />
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="75dp"
+            android:id="@+id/thermometer"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/thermometer" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="77&#xb0;"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:id="@+id/indoortemp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignTop="@+id/thermometer"
+            android:layout_toEndOf="@+id/thermometer" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="50sp"
+            android:id="@+id/textView2"
+            android:layout_alignTop="@+id/indoortemp"
+            android:layout_toEndOf="@+id/indoortemp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="indoors"
+            android:textSize="14sp"
+            android:id="@+id/textView3"
+            android:layout_below="@+id/indoortemp"
+            android:layout_alignStart="@+id/indoortemp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="90&#xb0;"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:id="@+id/textView4"
+            android:layout_alignTop="@+id/textView2"
+            android:layout_toEndOf="@+id/textView2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="outside"
+            android:id="@+id/textView5"
+            android:layout_alignBottom="@+id/thermometer"
+            android:layout_toEndOf="@+id/indoortemp"
+            android:layout_below="@+id/textView4"
+            android:layout_alignStart="@+id/textView4" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

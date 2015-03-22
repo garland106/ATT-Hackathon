@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sypir</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_music_selection">MusicSelectionActivity</string>
+    <string name="title_activity_selection">SelectionActivity</string>
+    <string name="title_activity_fragment_manager">FragmentManagerActivity</string>
+
+</resources>
