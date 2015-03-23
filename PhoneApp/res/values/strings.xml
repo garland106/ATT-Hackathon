@@ -7,5 +7,6 @@
     <string name="title_activity_music_selection">MusicSelectionActivity</string>
     <string name="title_activity_selection">SelectionActivity</string>
     <string name="title_activity_fragment_manager">FragmentManagerActivity</string>
+    <string name="title_activity_ride_share">RideShareActivity</string>
 
 </resources>

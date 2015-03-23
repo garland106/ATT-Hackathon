@@ -10,6 +10,7 @@ import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.venmo.VenmoLibrary;
@@ -26,6 +27,7 @@ public class SelectionActivity extends Fragment
 	private TextView songtitle;
 	private TextView artist;
 	private final int REQUEST_CODE_VENMO_APP_SWITCH = 999;
+	private RelativeLayout bottombar;
 	
 	public static Fragment newInstance() 
 	{
@@ -48,6 +50,7 @@ public class SelectionActivity extends Fragment
 				playpause = (ImageView) v.findViewById(R.id.playpause);
 				songtitle = (TextView) v.findViewById(R.id.songtitle);
 				artist = (TextView) v.findViewById(R.id.songartist);
+				bottombar = (RelativeLayout) v.findViewById(R.id.bottombar);
 				
 				//set action listeners
 				venmoAction.setOnTouchListener(venmoListener);
@@ -160,6 +163,8 @@ public class SelectionActivity extends Fragment
 				case MotionEvent.ACTION_UP: 
 				{
 					taxiAction.setImageResource(R.drawable.car);
+					Intent intent = new Intent(getActivity(), RideShareActivity.class);
+					startActivity(intent);
 					returnVal = true;
 					break;
 				}
@@ -169,6 +174,8 @@ public class SelectionActivity extends Fragment
 	};
 	
 	private OnTouchListener brightnessListener = new OnTouchListener(){	
+		
+		boolean toggle = true;
 		@Override
 		public boolean onTouch(View v, MotionEvent event) 
 		{
@@ -179,6 +186,15 @@ public class SelectionActivity extends Fragment
 				case MotionEvent.ACTION_DOWN: 
 				{
 					brightnesAction.setImageResource(R.drawable.brightness_highlighted);
+					volumeAction.setImageResource(R.drawable.volume_highlighted);
+					if(toggle)
+					{
+						bottombar.inflate(getActivity(), R.layout.brightnessbottombar, bottombar);
+					}
+					else
+					{
+						bottombar.inflate(getActivity(), R.layout.musicbottombar, bottombar);
+					}
 					returnVal = true;
 					break;
 				}
@@ -194,6 +210,8 @@ public class SelectionActivity extends Fragment
 	};
 	
 	private OnTouchListener volumeListener = new OnTouchListener(){	
+		
+		boolean toggle = true;
 		@Override
 		public boolean onTouch(View v, MotionEvent event) 
 		{
@@ -204,6 +222,15 @@ public class SelectionActivity extends Fragment
 				case MotionEvent.ACTION_DOWN: 
 				{
 					volumeAction.setImageResource(R.drawable.volume_highlighted);
+					if(toggle)
+					{
+						bottombar.inflate(getActivity(), R.layout.volumebottombar, bottombar);
+					}
+					else
+					{
+						bottombar.inflate(getActivity(), R.layout.musicbottombar, bottombar);
+					}
+					toggle = !toggle;
 					returnVal = true;
 					break;
 				}

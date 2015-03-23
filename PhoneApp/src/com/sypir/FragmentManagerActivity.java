@@ -25,8 +25,7 @@ public class FragmentManagerActivity extends FragmentActivity {
       	mViewPager.setAdapter(mViewPagerAdapter);
       	
       	Parse.initialize(getApplicationContext(), ParseAPIUtils.appID, ParseAPIUtils.clientKey);
-      	//ParseAPIUtils.register("julia", "password", "admin", getApplicationContext());
-      	//ParseAPIUtils.login("admin", "password","admin", getApplicationContext());
+      	ParseAPIUtils.login("garlnd106@gmail.com", "password", "admin", getApplicationContext());
       	Intent intent = new Intent(getApplicationContext(), TvConnectionService.class);
 		startService(intent);
 	}
